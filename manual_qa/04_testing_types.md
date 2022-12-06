@@ -32,3 +32,11 @@ Non-functional testing includes:
 - **Configuration testing**
 - **Security testing** to check that whether the application or the product is secured or not.
 - **Localization testing** 
+
+<br>
+
+### Changes related testing types
+***\#1. Smoke testing***
+***\#2. Regression testing***
+***\#3. Re-testing***
+***\#4. Sanity testing***
