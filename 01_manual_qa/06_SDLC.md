@@ -1,9 +1,9 @@
 https://www.softwaretestinghelp.com/software-development-life-cycle-sdlc/
 
-### Software Development Life Cycle
+# Software Development Life Cycle
 SDLC is a process that define the various stages involed in the development of SW for delivering a high-quality product. SDLC stages cover the complete life cycle of a SW i.e. from inception to retirement of the product.
 
-***SDLC Phases***
+### SDLC Phases
 - **Requirement gathering and analysis.** During this phase, all relevant information is collected from the customer to develop a product as per their expectation. Any ambiguties must be resolved in this phase only.
 - **Design.** In this phase, the requirement gathered in the SRS document is used as an input and SW architecture that is used for implementing system.
 - **Implementation or coding.** Implementation/Coding starts once the developer gets the Design document. The SW design is translated into source code. All the components of the SW are implemented in thsi phase.
@@ -11,9 +11,8 @@ SDLC is a process that define the various stages involed in the development of S
 - **Deployment.** Once the product is tested, it is deployed in the production env or first UAT is done depending on the customer expectation.
 - **Maintenance.** After the deployment of a product on the production environment, maintenance of the product i.e. if any issue comes up and neds to be fixed or any enhancement is to be done is taken care by the developers.
 
-<br>
 
-***SDLC Models***
+### SDLC Models
 1. **Waterfall Model** - very first model that is used in SDLC. It is also known as the linear sequential model. In this model, the outcome of one phase is the input for the next phase. Development of the next phase starts only when the previous phase is complete.
     - *Advantages:*
         - waterfall modelis the simple model which can be easily understood and is the one in which all the phases are done step by step.
