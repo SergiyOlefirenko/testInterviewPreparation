@@ -45,3 +45,21 @@ Digging deeper, as easy way to understand the definition of an API is to think a
 - **AMQP APIs** - **A**dvanced **M**essage **Q**ueuing **P**rotocol. AMQP is a protocol that follows open standards, and works at the application layer. AMQP is best suited for message-oriented middleware, and like othe protocols, AMQP dictates how messaging providers and clients communicate with each other.
 - **MQTR APIs** - **M**essage **Q**ueuing **T**elemetry **T**ransport. The MQTT messaging protocol is defined by Organization for Advancement of Structured Information Standards, better known  as OASIS. MQTT is well-suited for Internet of Things (IoT), in part because it is extremely lightweight. MQTT allows devices to publish and/or subscribe to messages.
 - **EDI** - **E**lectronic **D**ata **I**nterchange, and it's been around for a long time since the '70s! The idea behind EDI is to allow business to communicate electronically with each, typically transmitting information that was written on paper, like receipts or invoices that an accounts payable might send out, or order information such as purchase orders.
+
+
+# What is an API endpoint?
+An API endpoint is a point at which an API - the code that allows two software programs to communicate with each other - connects with the SW program. APIs work by sending requests for information from a web application or web server and receiving a response.
+In other words, API endpoints are the specific digital location where requests for information are sent by one program to retrieve the digital resource that exists there. Endpoints specify where APIs can access resources and help guarantee the proper functioning of the incorporated SW. An API's performance depends on its capacity to successfully communicate with API endpoints.
+SW programs typically have multiple API endpoints. For example, Instagram's endpoints include one that allows businesses and creators to measure media and profile interactions; one that allows them to moderate comments and their replies; and a third that allows them to discover hashtagged media.
+
+##### How API endpoints work
+Systems that communicate through APIs are integrated systems. One side sends the information to the API and is called the server. The other side, the client, makes the requests and manipulates the API.The server side that provides the requested information, or resources, is the API endpoint.
+For an effective request to be processed by the endpoint, the client must provide a uniform resource locator (URL), a method, a list of headers and a body.
+The headers provide metadata about a request and the body holds the data sent by the client to the server.
+Endpoints work in tandem with API methods. Methods are permitted requests that can be made, such as GET, DELETE, PATCH or POST. Methods - ofen called verbs in communications syntax - after often placed just before the specified endpoint in a full URL.
+
+##### Examples of API endpoints
+The code used in placing a request for a specific statistics page on the NBA's web site might read:
+> GET https://stats.nba.com/stats/allstarballotpredictor
+
+In this example GET is the method while the endpoint is the specific portion of the web address noted as **/stats/allstarballotpredictor**. 
