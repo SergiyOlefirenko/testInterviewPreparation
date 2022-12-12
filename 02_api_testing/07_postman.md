@@ -83,3 +83,45 @@ In variable:
 ### How to Create Postman Tests
 Postman Tests are JavaScript codes added to requests that help you verify results such as successful or failed status, comparison of expected results, etc. It usually starts with pm.test. It can be compared to asserts, verify commands available in other tools.
 Let's do some basic API testing using Postman for our parameterize requests:
+1. Go to GET reuquest
+    1. Swith to the tests tab. On the right side are snippt codes.
+    2. From the snippets section, click on "Status code: Code is 200".
+    3. The pane is auto-populated.
+![Postman Parameterize Requests](../00_resources/01_img/postman_09.png)
+
+2. Now click Send.The test result should now be displayed.
+![Postman Parameterize Requests](../00_resources/01_img/postman_10.png)
+
+3. Go back the test tab and let's add another test. This time we will compare the expected result to the actual result. From the snippets section, click on "Response body: JSON value check".
+![Postman Parameterize Requests](../00_resources/01_img/postman_11.png)
+
+
+### How to Create Collection
+Collections play an important role in organizing test suites. It can be imported and exported making it easy to share collections amongst the team. Let's start in creating a collection:
+1. Click on the New button at the top left conner of the page.
+2. Select Collection. Create collection window should pop up.
+3. Input the desired collection name and description then click create. A collection should now be created.
+4. Go back to the request tab. Click Save.
+5. Select Postman Test Collection.
+6. Click Save to your Collection.
+7. Postman test collection should now contain one request.
+
+
+### How to Run Collections using Collection Runner
+There are two ways to run a collection which is the Collection Runner and Newman. Let's begin by executing the collection in Collection Runner.
+
+1. Click on the Runner button found at the top of the page next to the Import button.
+![Postman Parameterize Requests](../00_resources/01_img/postman_12.png)
+
+2. Collection Runner page should appear such as below. Following is the description of various fileds.
+![Postman Parameterize Requests](../00_resources/01_img/postman_13.png)
+
+3. Run your Postman Test Collection by setting up the following:
+    - Choose you collection
+    - Set iterations as 3
+    - Set delays as 2500 ms
+    - Click on Run button
+![Postman Parameterize Requests](../00_resources/01_img/postman_14.png)
+
+4. Run Results page should be displayed after clicking the Run button. Depending on the delay, you should see the tests as they execute. Once tests have finished, you can see the test status if it is Passed or Failed and the results per iteration.
+![Postman Parameterize Requests](../00_resources/01_img/postman_15.png)
