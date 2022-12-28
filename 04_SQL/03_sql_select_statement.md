@@ -1,3 +1,6 @@
+https://www.javatpoint.com/sql-select
+
+
 # SQL SELECT Statement
 
 The SELECT statement is the most commonly used command in Structured Query Language. It is used to access the records from one or more database tables and views. It also retrieves the selected data that follow the conditions we want.
