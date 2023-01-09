@@ -91,7 +91,7 @@ DROP INDEX table_name.index_name;
 DROP INDEX index_name;
 ```
 
-***MySQL**
+**MySQL**
 ```sql
 ALTER TABLE table_name
 DROP INDEX index_name;
