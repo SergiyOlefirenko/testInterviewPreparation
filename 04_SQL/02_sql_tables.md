@@ -49,7 +49,7 @@ A table can reference a maximum of 253 other tables and columns as FKs (outgoing
 
 - ### CREATE TABLE
 SQL CREATE TABLE statement is used to create table in DB. If you want to create a table, you should name the table and define its column and each columns's data type.
-```
+```sql
 create table "tablename"  
 ("column1" "data type",  
 "column2" "data type",  
@@ -61,7 +61,7 @@ create table "tablename"
 We can create a copy of an existing table using the create table command. The new table gets the same column signature as the old table. We can select all columns or some specific columns. If we create a new table using an old table, the new table will be filled with the existing calue from the old table.
 
 The basic syntax for creating a table with the other table is:
-```
+```sql
 CREATE TABLE table_name  AS
 SELECT column1, column2,...
 FROM old_table_name WHERE ...;
@@ -71,19 +71,27 @@ FROM old_table_name WHERE ...;
 A SQL DROP TABLE statement is used to delete a table definition and all data from a table. This is very important to know that once a table is deleted all the information available in the table is lost forever, so we have to be very careful when using this command.
 
 Let's see the syntax to drop the table from the DB.
-```
+```sql
 DROP TABLE "table_name";
 ```
 
 - ### DELETE TABLE
 The DELETE statement is used to delete rows from a table. If you want to remove a specific row from a table you should use WHERE condition.
-```
+```sql
 DELETE FROM table_name [WHERE condition];
 ```
 But if you do not specify the WHERE condition it will remove all the rows from the table.
-```
+```sql
 DELETE FROM table_name;
 ```
+
+- ### TRUNCATE TABLE
+A truncate SQL statement is used to remove all rows (complete data) from a table. It is similar to the DELETE statement with no WHERE clause.
+```sql
+TRUNCATE TABLE table_name;
+```
+The rollback process is not possible after truncate table statement. Once you truncate a table you cannot use a flashback table statement to retrieve the content of the table.
+
 
 ***Difference between DELETE and TRUNCATE statements***
 There is slights difference between DELETE and TRUNCATE statement. The DELETE statement only deletes the rows from the table based on the condition defined by WHERE clause or delete all the rows from the table when condition is not specified. But it does not free space containing by the table. The TRUNCATE statement: it is used to delete all the rows from the table and free the containing space.
@@ -98,21 +106,9 @@ When you drop table:
 
 On the other hand when we TRUNCATE a table, the table structure remains the same, so you will not face any of the above problems.
 
-- ### RENAME TABLE
-```
-RENAME old_table_name TO new_table_name;
-```
-
-- ### TRUNCATE TABLE
-A truncate SQL statement is used to remove all rows (complete data) from a table. It is similar to the DELETE statement with no WHERE clause.
-```
-TRUNCATE TABLE table_name;
-```
-The rollback process is not possible after truncate table statement. Once you truncate a table you cannot use a flashback table statement to retrieve the content of the table.
-
 - ### COPY TABLE
 If you want to copy the data of one SQL table into another SQL table in the same SQL server, then it is possible by using the SELECT INTO statement in SQL.
-```
+```sql
 SELECT * INTO New_table_name FROM old_table_name;  
 ```
 
@@ -120,21 +116,21 @@ SELECT * INTO New_table_name FROM old_table_name;
 The ALTER TABLE statement in SQL allows you to add, modify, and delete columns of an existing table. This statement also allows DB users to add and remove various SQL constraints on the existing tables.
 
 ***ALTER TABLE add column statement in SQL***
-```
+```sql
 ALTER TABLE table_name ADD column_name column-definition;
 ```
 
 ***ALTER TABLE modify column statement in SQL***
-```
+```sql
 ALTER TABLE table_name MODIFY column_name column-definition;
 ```
 
 ***ALTER TABLE drop column statement in SQL***
-```
+```sql
 ALTER TABLE table_name DROP Column column_name;
 ```
 
 ***ALTER TABLE rename column statement in SQL***
-```
+```sql
 ALTER TABLE table_name RENAME COLUMN old_name to new_name;
 ```
