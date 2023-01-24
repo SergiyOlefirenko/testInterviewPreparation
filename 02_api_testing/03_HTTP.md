@@ -6,6 +6,7 @@ https://restfulapi.net/http-methods/
 **WWW** is about communication between we clients and servers.
 Communication between client computer and web servers is done sending HTTP Requests and receiving HTTP Responses.
 
+
 ## HTTP Methods
 REST APIs enable you to develop all kinds of web apps having all possible CRUD operations. REST guidelines suggest using a specific HTTP method on a particular type of call made to the server. 
 
@@ -16,12 +17,12 @@ REST APIs enable you to develop all kinds of web apps having all possible CRUD o
 Use GET requests **to retrieve resource representation/information only** - and not modify it in any way. As GET requests do not change the resource's state, these are said to be **sage methods**.
 Additionally, **GET APIs should be idempotent**. Making multiple identical requests must produce the same result every time until another API (POST or PUT) has changed the sate of the resource on the server.
 
-##### 1.1. GET API Response Codes
+#### 1.1. GET API Response Codes
 - For any given HTTP GET API, if the resource if found on the server, then it must return HTTP response code **200 (OK)** - along with the response body, which is usually either XML or JSON content.
 - In case the resource is NOT found on the server then API must return HTTP response code **404 (NOT FOUND)**.
 - Similarly, if it is determined that the GET request itself is not correctly formed then the server will return the HTTP response code **400 (BAD REQUEST)**.
 
-##### 1.2. Example URIs
+#### 1.2. Example URIs
 >HTTP GET http://www.appdomain.com/users
 >HTTP GET http://www.appdomain.com/users?size=20&page=5
 >HTTP GET http://www.appdomain.com/users/123
@@ -34,11 +35,11 @@ Additionally, **GET APIs should be idempotent**. Making multiple identical reque
 Use POST APIs **to create new subordinate resources**, e.g., a file is subordinate to a directory containing it or a row is subordinate to a DB table. When talking strictly about REST, POST methods are used to **create a new resource** into the collection of resources.
 Responses to this method are **not cacheable** unless the response includes appropriate Cache-Control or Expires header fields. POST is **neither safe nor idempotent**, and invoking two identical POST requests will result in two different resources containing the same information (except resource ids).
 
-##### 2.1. POST API Response Codes
+#### 2.1. POST API Response Codes
 - Ideally, if a resource has been created on the origin server, the response SHOULD be HTTP response code **201 (Created)** and contain an entity that describes the status of the request and refers to the new resource, and a Location header.
 - Many times, the action performed by the POST method not result in a resource that can be identified by a URI. In this case, either HTTP response code **200 (OK)** or **204 (No Content)** is the appropriate response status.
 
-##### 2.2. Example URIs
+#### 2.2. Example URIs
 >HTTP POST http://www.appdomain.com/users
 >HTTP POST http://www.appdomain.com/users/123/accounts
 
@@ -48,11 +49,11 @@ Responses to this method are **not cacheable** unless the response includes appr
 
 Use PUT APIs primary **to update and existing resource (if the resource does not exist, the API may decide to create a new resource or not)**. If the request passes through a cache and the Request-URI identifies one or more currently cached entites, those entries SHOULD be treated as stale. Responses to PUT method are **not cacheable**.
 
-##### 3.1. PUT API Response Codes
+#### 3.1. PUT API Response Codes
 - If a new resource has been created by the PUT API, the origin server MUST inform the user agent via HTTP response code **201 (Created)** response.
 - If an existing resource is modified, either the **200 (OK)** or **204 (No Content)** response codes SHOULD be sent to indicate successful completion of the request.
 
-##### 3.2. Example URIs
+#### 3.2. Example URIs
 >HTTP PUT http://www.appdomain.com/users/123
 >HTTP PUT http://www.appdomain.com/users/123/accounts/456
 
@@ -64,13 +65,13 @@ Use PUT APIs primary **to update and existing resource (if the resource does not
 
 DELETE APIs **delete the resources** (identified by the Request-URI). If you DELETE a resource, it's removed from the collection of resources. If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Response to this method are **not cacheable**.
 
-##### 4.1. DELETE API Response Codes
+#### 4.1. DELETE API Response Codes
 - A successful response of DELETE request SHOULD be an HTTP response code **200 (OK)** if the response includes an entity describing the status.
 - The status should be **202 (Accepted)** if the action has been queued.
 - The status should be **204 (No Content)** if the action has been perfromed but the response does not include an entity.
 - Repeatedly calling DELETE API on that resource will not change the outcome - howere, calling DELETE on a resource a second time will return a **404 (NOT FOUND)** since it was already removed.
 
-##### 4.2. Example URIs
+#### 4.2. Example URIs
 >HTTP DELETE http://www.appdomain.com/users/123
 >HTTP DELETE http://www.appdomain.com/users/123/accounts/456
 
@@ -109,13 +110,13 @@ A sample patch request to update the email will be like this:
 
 ### 7. Clossary
 
-##### 7.1 Safe Methods
+#### 7.1 Safe Methods
 
 Request methods are considered safe if their defined semantics are essentially read-only. The client does not request, and does not expect, any state change on the origin server as a result of applying a safe method to a target resource.
 **The GET, HEAD, OPTIONS, and TRACE methods are considered safe methods.**
 The purpose of distinguishing between safe and unsafe methods is to allow automated retrieval processes (spiders) and cache performance optimization (pre-fetching) to work without fear of causing harm.
 
-##### 7.2. Idempotent Methods
+#### 7.2. Idempotent Methods
 
 The term idempotent is used more comprehensively to describe **an operation that will produce the same results if executed once or multiple times**.
 In HTTP specification, the **PUT, DELETE and safe methods (GET, HEAD, OPTIONS, TRACE) are idempotent methods**.

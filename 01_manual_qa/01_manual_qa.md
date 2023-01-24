@@ -6,7 +6,7 @@
 
 ## What is software quality
 Quality software is reasonably bug or defect free, delivered on time and within budget, meets requirements and/or expectations, and is maintainable.
-Key aspects of quality for the customer iclude:
+Key aspects of quality for the customer include:
 
 - ***Good design*** - looks and style. The application or product should meet all the requirement specifications and at the same time it should be user friendly. 
 - ***Good functinality*** - it does the job well. All the features and their functiobality should work as expected. There should not be any deviation in the actual result and the expected result.
@@ -19,6 +19,7 @@ Key aspects of quality for the customer iclude:
 
 ## Verification and Validation
 ***Verification*** is a process of datermining if the software is designed and developed as per the specified requirements.
+
 ***Validation*** is the process of checking if the software (end product) has met the client's true needs and expectations.
 
 
