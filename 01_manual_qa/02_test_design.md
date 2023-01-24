@@ -9,7 +9,7 @@
 - to minimize the number of tests required to validate the product.
 
 
-### Test design techniques
+## Test design techniques
 <p>There are dozen of test design techniques you can use, but let focus on the most popular ones:</p>
 
 - Equivalent Class Partitioning
@@ -21,7 +21,7 @@
 <br>
 
 
-##### \#1. Equivalent Class Partitioning (ECP)
+### \#1. Equivalent Class Partitioning (ECP)
 <p>The ECP implies splitting test data into classes, where all elements are similar in some way. This technique make sence only if the componets are similar and can fit in a common group.<br>
 Choosing this technique meas that we are going to test only a few values from every group. ECP doesn't guarantee that the rest of the values not covered by the tests will be bug-free. We only assume that using several elements from the group will be quite illustrative.<br>
 The ECP is good solution for case when you deal with a large volume of incoming data or numerous identical input variants. Otherwise, it might make sense to cover a product with tests more closely.</p>
@@ -49,7 +49,7 @@ If you use the ECP technique, you get three sets of data to test:
 So, we can just pick a several numbers from each price range and assume that the rest of alike inputs will show the same results.
 
 
-##### \#2. Boundary Value Analysis (BVA)
+### \#2. Boundary Value Analysis (BVA)
 BVA is similar to the previous technique. We still group data in equivalent classes but don't test values from a particular class only. Instead, we check boundary values, those that are at the 'borders' of the classes.
 
 *Example:*
@@ -68,7 +68,7 @@ Let's take the previous scenario with varying shipping rates. Assuming that erro
     - invalid: 299.99.
 
 
-##### \#3. State Transition
+### \#3. State Transition
 The state transition visualizes the states of SW at a different time frames and stages of usage. This technique is effective for creating test suites for systems that have many state variations. It will be helpful if you test a sequence of events with a finite number of input options.
 
 *Example:*
@@ -79,8 +79,8 @@ A chart like this makes it easier to match possible inputs with expected outputs
 ![State transion example \#2](img/state_transition_02.png)
 
 
-##### \#4. Pairwise Testing
-The pairwise testing is based on mathematical algorithms, namely combinatorics. It makes it possible to create unique pairs and test a huge amount of incoming data in different combinations, but the calculations might get complicated. To cover the maximum of features with test scripts that will require minimum time for testing you ned to match data correctly, combining pairs in a specific way based on the calculations.
+### \#4. Pairwise Testing
+The pairwise testing is based on mathematical algorithms, namely combinatorics. It makes it possible to create unique pairs and test a huge amount of incoming data in different combinations, but the calculations might get complicated. To cover the maximum of features with test scripts that will require minimum time for testing you need to match data correctly, combining pairs in a specific way based on the calculations.
 
 *Example:*
 Let's say, there is a network of bakeries selling apple pies and cheesecakes online. Each is available in three sizes - small, medium, and big. The bakery offers immediate and scheduled address deliver, as well as a pick-up option. The bakery works in three cities - New York, LA, and Chicago. Also, a user can order up to three items at a time.
@@ -89,7 +89,7 @@ If you want to test all possible inputs, that would be 2x3x3x3x2x2=216 valid com
 ![Pairwise \#2](img/pairwise_02.png)
 
 
-##### \#5. Error Guessing
+### \#5. Error Guessing
 In error guessing, a QA engineer predicts where errors are likely to appear, relying on previous experience, knowledge of the system, and product requirements. Thus, a QA specialist is to identify spots where defects tend to accumulate and pay increased attention to those areas.
 
 *Example:*
