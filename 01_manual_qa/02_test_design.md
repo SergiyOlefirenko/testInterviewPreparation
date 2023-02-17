@@ -40,7 +40,7 @@ If you use the ECP technique, you get three sets of data to test:
 
 2. From \$100 to $300:
     - valid boundary conditions: any price in range from 100 to 299.99;
-    - invalid: any brice below 100 or above 299.99.
+    - invalid: any price below 100 or above 299.99.
 
 3. \$300 and higher:
     - valid: any price above 299.99;
@@ -74,8 +74,11 @@ The state transition visualizes the states of SW at a different time frames and 
 *Example:*
 The simplest example of the state transition is visualizing logging into an account during web or mobile app testing. Let's say, we are testing a system that offers a limited number of attempts to enter a correct password. If a user fails to enter a correct password, the system blocks the access. 
 Blocks of different colors designate specific states of the system.
+
 ![State transion example \#1](img/state_transition_01.png)
+
 A chart like this makes it easier to match possible inputs with expected outputs. Having a visualization right in front of your eyes helps to keep a clear head and connect the states correctly. You can later arrange the data concisely and convenietly - for example, in a table to look up to during testing:
+
 ![State transion example \#2](img/state_transition_02.png)
 
 
@@ -84,8 +87,11 @@ The pairwise testing is based on mathematical algorithms, namely combinatorics. 
 
 *Example:*
 Let's say, there is a network of bakeries selling apple pies and cheesecakes online. Each is available in three sizes - small, medium, and big. The bakery offers immediate and scheduled address deliver, as well as a pick-up option. The bakery works in three cities - New York, LA, and Chicago. Also, a user can order up to three items at a time.
+
 ![Pairwise \#1](img/pairwise_01.png)
+
 If you want to test all possible inputs, that would be 2x3x3x3x2x2=216 valid combinations. Instead, you can arrange the variables in a way that will allow covering maximum scenarios. To do this, you'll need to group the variables or use one of the tools that can do it for you. As a result, we got 17 scenarios able to cover all 216 combinations. 
+
 ![Pairwise \#2](img/pairwise_02.png)
 
 
@@ -95,7 +101,7 @@ In error guessing, a QA engineer predicts where errors are likely to appear, rel
 *Example:*
 As a rule, QA engineers start with testing for the common mistakes, such as:
 - entering blank spaces in text fields
-- presing the submit button without entering data
-- entering invalid parameterss (email address instead phone number, etc.)
+- pressing the submit button without entering data
+- entering invalid parameters (email address instead phone number, etc.)
 - uploading files that exceed the maximum limit
 - and so on

@@ -59,7 +59,7 @@ SDLC is a process that define the various stages involed in the development of S
         - risk is analyzed and identified at an early stage.
         - defects are detected at an early stage.
         - as the product is divided into smaller chunks it is easy to manage the product.
-    - * Disadvantages:*
+    - *Disadvantages:*
         - complete requirement and undestanding of a product are required to break down and build incrementally.
 
 6. **Agile Model** is a combination of the iterative and incremental model. This model focuses more on flexibility while developing a product rather than on requirement. In Agile, a product is broken into small incremental builds. It is not developed as a complete product in one go. Each build increments in terms of features. The next build is built on previous functionality. In agile iterations are termed as sprints. Each sprint lasts for 2-4 weeks. At the end of each sprint, the product owner verifies the product and after this approval, it is delivered to the customer. Customer feedback is taken for improvement and his suggestions and enhancement are worked on in the next sprint. Testing is done in each sprint to minimize the risk of any failures.

@@ -25,12 +25,12 @@ The person on the Scrum Team who uses their knowledge of Scrum to help the team 
 The scrum master focuses on:
 - Transparency. To effectively inspect and adapt it is important that the right people can see what is going on. The scrum master is tasked with ensuring that the scrum team works in a transparent way. Examples include creating story maps and updating Confluence pages with retrospective ideas.
 - Empiricism. A fundamental for scrum the idea that the best way of planning is to do work and learn from it. The empirical process is not easy and requires the scrum master to coach the scrum team on breaking down work, describing clear outcomes, and reviewing those outcomes.
-- Self-organization. Telling a development team they can self-organize does mean that the team will self-organize. The scurm master will encourage team members to step outside their comfort zone and try different things.
+- Self-organization. Telling a development team they can self-organize does not mean that the team will self-organize. The scurm master will encourage team members to step outside their comfort zone and try different things.
 - Values. Scrum defines 5 values of courage, focus, commitment, respect, and openness not because they are nice to have, but because they create an environment of physiological safety and trust. Following the values is the responsibility of everyone in the scrum team, but the scrum master takes an active role in encouraging and reminding everyone of the importance of those values.
 
 
 ### Product Owner
-The person on the Scrum Team who makes sure that the team is creating the most valuable product the can create.
+The person on the Scrum Team who makes sure that the team is creating the most valuable product they can create.
 
 <img src="../00_resources/01_img/scrum/Scrum-Product-Owner-revised.png" height="300">
 
@@ -69,7 +69,7 @@ An event dedicated to planning out the work that will take place during the Spri
 
 - **Duration**: Usually arount one hour per week of iteration. e.g. a two-week sprint kicks off with a two-hour planning meeting.
 
-- **Purpose**: Coming into the scrum meeting, the Product owner will have a prioritized product backlog. They discuss each item wiht the development team, and the group collectively estimates the effort involved. The development team will then make a sprint forecast outlining how much work the team can complete from the product backlog. That body of work then becomes the sprint backlog.
+- **Purpose**: Coming into the scrum meeting, the Product owner will have a prioritized product backlog. They discuss each item with the development team, and the group collectively estimates the effort involved. The development team will then make a sprint forecast outlining how much work the team can complete from the product backlog. That body of work then becomes the sprint backlog.
 
 
 ### Daily Scrum
@@ -112,7 +112,7 @@ The Scrum Team gets together during this event to talk about how the last Sprint
 
 <hr>
 
-## Sprint Artifacts
+## Scrum Artifacts
 
 - **Product Backlog** - an evolving, ordered list of what is needed to improve the product; it is the single source of work undertaken by the Scrum Team. Commitment: ***Product Goal*** - the target the team plans against.
 
