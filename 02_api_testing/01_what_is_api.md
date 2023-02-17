@@ -1,6 +1,6 @@
 # What is API
 
-***Application Programming Interface (API)*** is a SW interface that allows two or more applications to interact with each other without any user intervention. API is a collection of SW functions and procedures. In simple terms, API means a SW code that can be accessed or executed. API is defined as a code that helps two different software's to communicate and exchange data with each other.
+***Application Programming Interface (API)*** is a SW interface that allows two or more applications to interact with each other without any user intervention. API is a collection of SW functions and procedures. In simple terms, API means a SW code that can be accessed or executed.
 
 https://blog.postman.com/intro-to-apis-what-is-an-api/
 

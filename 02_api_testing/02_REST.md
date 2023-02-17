@@ -2,7 +2,7 @@ https://restfulapi.net/
 
 
 # What is REST
-REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems.
+REST is an acronym for REpresentational State Transfer and an architectural style for distributed systems.
 A Web API (or Web Service) conforming to the REST architectural style is a REST API.
 
 ## 1. Guiding Principles of REST
@@ -27,7 +27,7 @@ Statelessness mandates that each request from the client to the server must cont
 The cacheable constraint requires that a resource should implicity or explicity label itself as cacheable or non-cacheable. If the response is cacheable, the client app gets the right to reuse the response data later for equivalent requests and a specified period.
 
 ### 1.5. Layered System
-The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior. For example, in a layered system, each component cannot see beyond the immediate layer they are interacting with.
+The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior. For example, in a layered system, each component cannot see beyond the intermmediate layer they are interacting with.
 
 ### 1.6. Code on Demand (Optional)
 REST also allows client functionality to extend by downloading and executing code in the form of applets or scripts. The downloaded code simplifies clients by reducing the number of features required to be pre-implemented. Servers can provide part of features delivered to the client in the form of code, and the client only needs to execute the code.

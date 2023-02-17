@@ -9,6 +9,7 @@ The client-server model is a distributed application structure that partitions t
 ## How the Client-Server Model works?
 - ***Client:*** when we talk the word Client, it mean a computer (Host) i.e capable of receiving information or using a particular service from the service providers (Servers).
 - ***Servers:*** are remote computers which provide information (data) or access to particular services.
+
 ![Client-server](../00_resources/01_img/client_server_01.png)
 
 ## How the browser intercats with the servers?
@@ -19,6 +20,7 @@ There are a few steps to follow to interact with the servers for a client.
 - Browser sends over an HTTP/HTTPS reqeust to WEB Server's IP (provided by DNS server).
 - Server sends over the necessary files of the website.
 - Browser then renders the files and the website is displayed. This rendering is done with the help of DOM (Document Object Model) interpreter, CSS interpreter and JS Engine collectively known as the JIT (Just in Time) or Compilers.
+
 ![Client-server](../00_resources/01_img/client_server_02.png)
 
 ## Types of Client Server Architecture
@@ -41,7 +43,7 @@ Additionally, client-server systems are more expensive to develop than peer-to-p
 
 ## Characteristics of Client-server Architecture
 - A mechanism of requests and responses powers the architecture. The client sends a request to the server, and the server returns data in the response to the information requested.
-- The architecture uses a common contact protocol so that devices can simply communicate with  one another. Every data transport protocol is available at the application layer.
+- The architecture uses a common contact protocol so that devices can simply communicate with one another. Every data transport protocol is available at the application layer.
 - A server may only be able to handle a limited number of client requests at once. It uses a method targeting priority to respond to each and every query.
 - By assaulting the server with duplicate requests, denial of service attacks makes it difficult for it to respond to legitimate client requests.
 - Scalability is a crucial feature of client-server systems. They can be resized either horizontally of vertically. Adding or removing client workstations while barely affecting performance is known as horizontal scaling. Vertical scaling refers to upgrading to a more powerul server.
