@@ -21,7 +21,7 @@ Feature: Addition
 2. Write the step definitions that implement the behavior described in the Gherkin scenario. In a file called <mark>step_definitions.py</mark> under <mark>features/steps<mark> directory.
 ```python
 from behave import given, when, then
-from behave_bdd.my_module import add
+from my_module import add
 
 
 @given('I have the numbers {num1:d} and {num2:d}')
