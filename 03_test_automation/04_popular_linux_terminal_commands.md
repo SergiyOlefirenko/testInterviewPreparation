@@ -99,7 +99,7 @@ examples:
 
 - **mkdir summer winter** - create multiple directories.
 - **mkdir summer/seeds** - create directory inside existing directory.
-- **mkdir -p winter/seeds/lettuce** - create nested direcory and all directory on the way.
+- **mkdir -p winter/seeds/lettuce** - create nested direcory and all directories on the way.
 
 ---
 
