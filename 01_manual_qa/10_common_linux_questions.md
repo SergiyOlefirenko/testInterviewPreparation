@@ -189,9 +189,9 @@ sudo fdisk -l
 
 ***ip route*** - command to display routing table.
 
-***sudo ip route add \<destination_ip_address>/\<netmask> via \<getway_ip_address> dev \<interface>*** - command to add route to the routing table.
+***sudo ip route add [destination_ip_address]\[netmask] via [getway_ip_address] dev [interface]*** - command to add route to the routing table.
 
-***sudo ip route del \<destination_ip_address>/\<netmask> via \<gateway_ip_address> dev \<interface>*** - command to delete route from routing table.
+***sudo ip route del [destination_ip_address]\[netmask] via [gateway_ip_address] dev [interface]*** - command to delete route from routing table.
 
 ---
 
