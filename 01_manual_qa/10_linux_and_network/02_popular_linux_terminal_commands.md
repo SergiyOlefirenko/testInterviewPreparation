@@ -147,7 +147,7 @@ examples:
     ls: test_dir: No such file or directory
     ```
 
-- **rm -ri \<path\>** - remove directories and their content but comfimation is needed.
+- **rm -ri \<path\>** - remove directories and their content but confimation is needed.
     ```sh
     ❯ ls test_dir
     cat   dog   snake
@@ -544,7 +544,7 @@ Ubuntu alternative is **xdg-open**.
     [1]  + 19433 suspended (tty output)  top
     ```
 
-- **&** can be used to run process in the background, example: **sleep 50 &**
+- **& (ampersand)** can be used to run process in the background, example: **sleep 50 &**
 
     ```sh
     ❯ sleep 50 &
@@ -625,6 +625,8 @@ Ubuntu alternative is **xdg-open**.
 
 - **sudo passwd \<username>** - update password for specified user.
 
+---
+
 45. **chown** - change file owner and group.
 
 - **chown \<owner> \<file_or_folder>** - should be run with 'sudo'. ```-R``` option change user and group recursively.
@@ -664,6 +666,8 @@ Ubuntu alternative is **xdg-open**.
 - w: file can be modified / directory's contestns can be modified (create new files, rename files/folders) but only if the executable attribute is also set.
 - x: file can be treated as a program to be executed / allows a directory to be entered or 'cd'ed into
 - \-: file cannont be read, modified, or executed depending on the location fo the character / directory contents cannot be shown, modified, or cd'ed into depending on the location of the '-' character.
+
+---
 
 46. **chmod** - tool to alter permissions
 
