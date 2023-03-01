@@ -67,7 +67,7 @@ Protocol Data Unit for each layer of the OSI model:
 7. **Difference between UDP and TCP**
 
 1) Connection-Oriented vs Connectionless:
-    - TCP is connection-oriented protoclo, which means that it establishes a connection between two devices before transmitting data;
+    - TCP is connection-oriented protocol, which means that it establishes a connection between two devices before transmitting data;
     - UDP is a connectionless, which means that it does not establish a connection before transmitting data.
 
 2) Reliablity:
@@ -103,19 +103,19 @@ When you enter a domain name in your web browser, your computer sends a request 
 
 11. **DHCP messages**
 
-1) DHCP Discover message is brodcasted by a device that is looking for a DHCP server to obtain an IP address.
-2) DHCP Offer message is a server response for Discover message. This message is includes IP address and other network configuration information: subnet mask, default gateway, and DNS server information.
-3) DHCP Request indicates that device wants to accept the offered IP address.
-4) DHCP Acknowledgment indicates that server has assign provided IP address to device. This message also includes lease time - duration for which IP address will be assigned to the device before it needs to be renewed.
+1) <mark>DHCP Discover message</mark> is brodcasted by a device that is looking for a DHCP server to obtain an IP address.
+2) <mark>DHCP Offer message</mark> is a server response for Discover message. This message is includes IP address and other network configuration information: subnet mask, default gateway, and DNS server information.
+3) <mark>DHCP Request</mark> indicates that device wants to accept the offered IP address.
+4) <mark>DHCP Acknowledgment</mark> indicates that server has assign provided IP address to device. This message also includes lease time - duration for which IP address will be assigned to the device before it needs to be renewed.
 
 ---
 
 12. **TCP 3 way handshake**
 
 Three steps of the TCP three-way handshake:
-1) SYN (Synchronize) - the client sends a SYN packet to the server, indicating that it wants to establish a connection.
-2) SYN-ACK (Synchronize-Acknowledgment) - the server responds with SYN-ACK packet, indicating that it has received the client's request and is willing to establish a connection.
-3) ACK (Acknowledgment) - the client sends ACK packet to the server, indicating that it has received the server's SYN-ACK paket and is ready to start exchanging data.
+1) <mark>SYN (Synchronize)</mark> - the client sends a SYN packet to the server, indicating that it wants to establish a connection.
+2) <mark>SYN-ACK (Synchronize-Acknowledgment)</mark> - the server responds with SYN-ACK packet, indicating that it has received the client's request and is willing to establish a connection.
+3) <mark>ACK (Acknowledgment)</mark> - the client sends ACK packet to the server, indicating that it has received the server's SYN-ACK paket and is ready to start exchanging data.
 
 Once the three-way handshake is complete, the connection is established and data can be exchanged between the client and server in both directions.
 
@@ -176,7 +176,7 @@ To limit the size of a broadcast domain, you can use various network segmentatio
 1) After you enter a domain name in your browser, your computer sends a request to DNS server to find out the IP address of specifed domain name.
 2) DNS server looks up the IP address associated with the domain name in its database.
 3) If IP address is found, DNS server sends it back to your computer.
-4) If IP address is not found, DNS server forwards the request to another DNS that might have the it. This process continues until the DNS server finds the IP address associated with the domain name, and sends it back to your computer.
+4) If IP address is not found, DNS server forwards the request to another DNS that might have it. This process continues until the DNS server finds the IP address associated with the domain name, and sends it back to your computer.
 
 ---
 
@@ -195,6 +195,7 @@ AAA stands for Authentication, Authorization, and Accounting. It is security fra
 22. **Examples of authentication servers.**
 
 Active Directory - service that provides authentication and authorization sevices for Windows-based networks.
+
 LDAP (Lightweight Directory Access Protocol)
 
 ---
