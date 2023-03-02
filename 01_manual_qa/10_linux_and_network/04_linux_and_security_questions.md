@@ -29,7 +29,7 @@
 
 4. **What is IOCs?**
 
-IOCs (Indicators of Compromise) are pieces of information that provide evidence that a system has been compromised or attached. These indicators can include any type of activity or behavior that is abnormal or suspicious, such as:
+IOCs (Indicators of Compromise) are pieces of information that provide evidence that a system has been compromised or attacked. These indicators can include any type of activity or behavior that is abnormal or suspicious, such as:
 - unusual network traffic patterns
 - unexpected system modifications
 - the presence of malicious files or software
@@ -55,7 +55,7 @@ Firewalls can use a variety of methods to control network traffic, including:
 - <mark>Packet filtering</mark>: examining each packet of data that passes through the firewall and blocking packets that do not meet predefined criteria.
 - <mark>Stateful inspection</mark>: monitoring the state of network connections to ensure that only legitimate traffic is allowed through.
 - <mark>Application-level gateway (proxy)</mark>: examining the content of network traffic at the application level to identify and block malicious or unauthorized requests.
-- <mark>Intrusion detetion and preventing</mark>: monitoring network traffic for signs of suspicious activity or known attack patterns, and blocking traffic that matches these patterns.
+- <mark>Intrusion detection and preventing</mark>: monitoring network traffic for signs of suspicious activity or known attack patterns, and blocking traffic that matches these patterns.
 
 ---
 
@@ -138,6 +138,116 @@ Key differences between distributions:
 
 11. **How to display only those lines from the log file that contains "ERROR" in the Linux terminal:**
 
+```sh
 cat /path/to/file | grep ERROR
 grep -rn "ERROR" *.log
+```
 
+---
+
+12. **How to disable port or protocol type in linux?**
+
+To disable a port of protocol in Linux, you can use a firewall application like iptables. The steps to disable a port or protocol type are as follows:
+1) Check the current status of the firewall using the following command:
+    ```sh
+    sudo iptables -L
+    ```
+2) Identify the port of protocol type that you want to disable.
+3) Use the following command to block the port of protocol type:
+```sh
+sudo iptables -A INPUT -p [protocol] --dport [port] -j DROP
+```
+
+---
+
+13. **Difference between \#Unable to render embedded object: File (\/bin\/sh and \#) not
+found.\/bin\/bash - where to use each one of them (\#!\/bin\/sh is more cross-platform).**
+
+The difference beween ```#!/bin/sh``` and ```#!/bin/bash``` is the shel that is used to interpret the script. ```#!/bin/sh``` specifies that the Bourne shell should be used, while ```#!/bin/bash``` specifies that the Bash shell should be used.
+
+In general, ```#!/bin/sh``` is more cross-platform because it is available on most Unix-like systems, while ```#!/bin/bash``` may not be available on some systems or may be located in a different location. ```#!/bin/sh``` is also generally more lightweight and faster.
+
+However, there are some cases where you want to use ```#!/bin/bash```. Bash provides many additional features and extentions beyond what is available in Bourne shell, such as arrays, process substitution, and advanced string manipulation.
+
+The error message "Unable to render embedded object: File (/bin/sh and #) not found." suggests that the system is unable to locate the shell specified in the shebang line. This can occur if the shell is not installed or if it is located in a different location than expected. In this case, you may need to modify the shebang line to specify the correct location of the shell on your system.
+
+---
+
+14. **If you need to transform a lot of data with regular expressions what to use? Bash or Python?**
+
+Both Bash and Python can be used to transform data using regular expressions. However, Python is generally a more powerful and flexible language for this task. Python has a built-in re module for regular expressions, which provides more advanced features than the regular expression support available in Bash.
+
+Python also provides many other useful libraries for working with data, such as pandas, which can be used for data analysis and transformation tasks. In addition, Python's syntax and structure make it easier to write and maintain complex scripts and applications.
+
+Bash, on the other hand, is a more lightweight and simpler language, which may be more suitable for smaller or simpler data transformation tasks. It also has built-in support for regular expressions, which can be useful for quick and simple tasks.
+
+Advantage of Bash is that it is cross-platform and is preinstalled on many of systems.
+
+---
+
+15. **Supposing you need to distribute a patch for some product to customers, what is the most cross-platform universal way of doing so?**
+
+The most cross-platform universal way of distributing a patch to customers is to provide a patch file in a format that can be applied by standard patching tools available on multiple platforms.
+
+---
+
+16. **What does docker-compose do?**
+
+Docker Compose is a tool for defining and running multi-container Docker applications. It allows you to define the services and dependencies of your applicaiton in a YAML file, and then use that file to spin up all the required containers with a single command. Docker compose is useful for complex applications that require multiple containers running together, such as web applications with a DB and cache.
+
+Key features of Docker Compose:
+1) Multi-container application management.
+2) YAML-based configuration. This makes it easy to version and manage your application's configuration.
+3) Automatic network configuration. Docker automatically creates a network for your containers and assign them network aliases, making it easy for them to communicate with each other.
+4) Dependency management. You can define dependencies between services, so that containers start in the correct order.
+5) Environment variable support. Docker compose allows you to set environment variables for your container, making it easy to configure your application for different environments.
+6) Scaling. You can scale your application services up or down with a single command, making it easy to adjust your infrastructure to handle changing loads.
+
+---
+
+17. **How to run a command inside a container?**
+
+To run a command inside a container, you can user the ```docker exec``` command.
+1) First, start the container that you want to run command in.
+    ```sh
+    docker run -it ubuntu
+    ```
+2) Get its container ID.
+    ```sh
+    docker ps
+    ```
+3) Use ```docker exec``` command to run the command inside container. For example, ```ls``` command:
+    ```sh
+    docker exec -it [container-id] ls
+    ```
+
+The ```-it``` option tells Docker to run the command in an interactive terminal session, allowing to see the command output and interact with the container if necessary.
+
+Other ways to run command inside docker cotainer:
+1) ```docker attach``` command. This will attach yo the container's standard input, output, and error streams, allowing you to run commands inside it. Note that using ```docker attach``` may interfere with the container's process and is not recommended for running commands that require user input.
+    ```sh
+    docker attach [container-id]
+    ```
+2) You can also user ```docker run``` command to start a container and run a command in it directly. Note that this method starts a new container each time you run a command, which can be inefficient if you need to run multiple commands in the same container.
+    ```sh
+    docker run -it ubuntu ls
+    ```
+
+---
+
+18. **How to transfer a container?**
+
+To trasfer a container from one system to another, you can use Docker's export and import functionality.
+1) Export container.
+    ```sh
+    docker export my-container > my-container.tar
+    ```
+2) Trasfer the tar file to the destination system using a secure file transfer protocol, such as SCP, SFTP, or other.
+3) Import container.
+    ```sh
+    docker import my-container.ra my-container
+    ```
+4) Run container.
+    ```sh
+    docker run my-container
+    ```
