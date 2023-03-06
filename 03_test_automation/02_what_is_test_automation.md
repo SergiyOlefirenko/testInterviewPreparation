@@ -68,3 +68,18 @@ From a modern point of view the test pyramid seems overly simplistic and can the
 6. **Tests that cannot be 100% automated should not be automated at all** - unless doing so will save considerable time.
 7. Test that **adds no value**.
 8. Test that **doesn't focus on the risk areas** of your application.
+
+---
+
+## Concept of test automation framework
+
+A test automation framework is as set of guildelines, rules, and coding standards that are used to develop automated tests in a consistent and scalable way.
+
+Test automation frameworks provide a systematic approach to designing, writing, executing, and maintaining automated tests. They provide a structure for organizing test code and help ensure that tests are reliable, maintainable, and reusable.
+
+A typical test automation framework consists of three main components:
+1. Test library: this component contains a set of pre-defined functions or methods that can be used to automate specific actions, such as filling out a form, clicking a button, or verifying a piece of text.
+2. Test runner: this component is responsible for executing the automated tests in a specific order and generating test reports.
+3. Test data: contains input data and expected results for each test scenario.
+
+There are serveral types of test automation frameworks, including keyword-driven, data-driven, behavior-driven, hybrid frameworks, and others.
